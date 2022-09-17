@@ -7,7 +7,7 @@ import time
 
 
 # for firebase
-#import firebase_real
+import firebase_real
 
 # for gpio
 import posture as ps
@@ -182,7 +182,7 @@ with dai.Device(pipeline) as device:
         plug = 0
         if p_init == True:
             pose = int(detection.spatialCoordinates.z) - init_position
-            #firebase_real.fire_rd.fire_add(pose)
+            firebase_real.fire_rd.fire_add(pose)
 
         # debug
         cv2.putText(frame, f"Z_after: {int(pose)} mm", (x1 + 10, y1 + 95), cv2.FONT_HERSHEY_TRIPLEX, 0.5, (0, 255, 0))
