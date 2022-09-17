@@ -185,6 +185,8 @@ with dai.Device(pipeline) as device:
 
         # debug
         cv2.putText(frame, f"Z_after: {int(pose)} mm", (x1 + 10, y1 + 95), cv2.FONT_HERSHEY_TRIPLEX, 0.5, (0, 255, 0))
+        cv2.putText(frame, f"flag: {int(plug)}", (x1 + 10, y1 + 110), cv2.FONT_HERSHEY_TRIPLEX, 0.5, (0, 255, 0))
+
 
         # decide pose
         if pose <= -300:
