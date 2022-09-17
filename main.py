@@ -179,6 +179,7 @@ with dai.Device(pipeline) as device:
 
         # calc target's pose
         pose = 0
+        plug = 0
         if p_init == True:
             pose = int(detection.spatialCoordinates.z) - init_position
             #firebase_real.fire_rd.fire_add(pose)
