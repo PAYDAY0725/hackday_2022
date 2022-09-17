@@ -6,7 +6,8 @@ PAYDAY 2022
 
 #include <M5Stack.h>
 
-
+uint32_t pin36_stat = 0;
+  
 void setup() {
   // init
   M5.begin();
@@ -14,16 +15,28 @@ void setup() {
   
   M5.Lcd.fillScreen(TFT_BLACK);
   M5.Lcd.setTextColor(TFT_WHITE);
+
+  pinMode(36,INPUT);
 }
 
 
 void loop() {
-  // for test
+  /*// for test
   if(M5.BtnA.read())
     inactive();
   else if(M5.BtnB.read())
     active();
+  */
 
+  // receive from raspberry pi
+  pin36_stat = digitalRead(36);
+  
+  if(pin36_stat)
+    active();
+  else
+    inactive();
+  
+  delay(10);
 }
 
 // can talk
