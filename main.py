@@ -178,6 +178,7 @@ with dai.Device(pipeline) as device:
             p_init = True
 
         # calc target's pose
+        pose = 0
         if p_init == True:
             pose = int(detection.spatialCoordinates.z) - init_position
             #firebase_real.fire_rd.fire_add(pose)
@@ -190,7 +191,7 @@ with dai.Device(pipeline) as device:
 
         # comm w/ m5stack
         ps.piras.posture(plug)
-        
+
 
         #cv2.putText(frame, "NN fps: {:.2f}".format(fps), (2, frame.shape[0] - 4), cv2.FONT_HERSHEY_TRIPLEX, 0.4, (255,255,255))
         cv2.imshow("depth", depthFrameColor)
