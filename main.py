@@ -184,7 +184,7 @@ with dai.Device(pipeline) as device:
             #firebase_real.fire_rd.fire_add(pose)
 
         # debug
-        cv2.putText(frame, f"Z_after: {int(detection.spatialCoordinates.z)} mm", (x1 + 10, y1 + 95), cv2.FONT_HERSHEY_TRIPLEX, 0.5, (255, 0, 0))
+        cv2.putText(frame, f"Z_after: {int(pose)} mm", (x1 + 10, y1 + 95), cv2.FONT_HERSHEY_TRIPLEX, 0.5, (0, 255, 0))
 
         # decide pose
         if pose <= 50:
