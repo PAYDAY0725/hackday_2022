@@ -190,7 +190,7 @@ with dai.Device(pipeline) as device:
 
 
         # decide pose
-        if pose <= -300:
+        if pose <= -3000:
             plug = 0
         else:
             plug = 1
