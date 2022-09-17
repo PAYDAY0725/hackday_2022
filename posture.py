@@ -3,7 +3,8 @@ import wiringpi
 class piras:
 
     def posture(plug):
-        wiringpi.wiringPiSetupGpio()
+        #wiringpi.wiringPiSetupGpio()
+        wiringpi.wiringPiSetupSys()
         wiringpi.pinMode(25,1)
 
         if plug == 1:
