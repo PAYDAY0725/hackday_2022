@@ -187,7 +187,7 @@ with dai.Device(pipeline) as device:
         cv2.putText(frame, f"Z_after: {int(pose)} mm", (x1 + 10, y1 + 95), cv2.FONT_HERSHEY_TRIPLEX, 0.5, (0, 255, 0))
 
         # decide pose
-        if pose <= 50:
+        if pose <= -300:
             plug = 0
         else:
             plug = 1
